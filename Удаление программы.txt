@@ -1,0 +1,3 @@
+product where name=”טלÿ ןנמדנאללû” call uninstall 
+@pause
+exit

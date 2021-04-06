@@ -1,0 +1,5 @@
+Set ProcessName=process.exe
+TaskList /FI "ImageName EQ %ProcessName%" 2>nul|Find /I "%ProcessName%">nul||(
+start 
+)
+@pause

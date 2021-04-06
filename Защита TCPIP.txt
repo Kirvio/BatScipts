@@ -1,0 +1,14 @@
+Защита от сетевых атак протокола TCP/IP
+Для защиты от сетевых атак протокола TCP/IP добавляются параметры, с установкой их значения и изменения значения существующих параметров в ключе реестра HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesTcpipParameters
+
+    «EnableICMPRedirect» - значение «4,0»
+    «EnableSecurityFilters» - значение «4,1»
+    «KeepAliveTime» - значение «4,30000»
+    «SynAttackProtect» - значение «4,2»
+    «TcpMaxConnectResponseRetransmiissions» - значение «4,2»
+    «TcpMaxConnectRetransmiissions» - значение «4,3»
+    «TcpMaxDataRetransmiissions» - значение «4,3»
+    «TcpMaxPortsExhausted» - значение «4,3»
+    «DisableIPSourceRouting» - значение «4,2»
+
+Подробнее: https://www.securitylab.ru/blog/personal/aguryanov/29935.php

@@ -1,0 +1,42 @@
+REM разрешить удаленное управление
+netsh advfirewall firewall set rule group=
+"remote administration" new enable=yes
+@pause
+REM открыть порты 
+netsh advfirewall firewall
+add rule name="Open SQL Server Port 1433"
+dir=in action=allow protocol=TCP localport=1433
+@pause
+REM разрешить программе принимать подключения
+netsh advfirewall firewall
+add rule name="Allow Messenger" dir=in action=allow
+program="C:\programfiles\messenger\msnmsgr.exe"
+@pause
+REM Контроль запросов проверки связи
+netsh advfirewall firewall add rule name="All ICMP V4"
+dir=in action=block protocol=icmpv4
+netsh advfirewall firewall add rule name="All ICMP V4"
+dir=in action=allow protocol=icmpv4
+@pause
+REM Настройка журнала
+netsh advfirewall set currentprofile
+logging filename "D:\Firewall\pfirewall.log"
+@pause
+REM Сброс брандмаузера к настройкам по умолчанию
+netsh advfirewall reset
+@pause
+REM включение и выключение брандмаузера
+netsh advfirewall set allprofiles state on
+netsh advfirewall set allprofiles state off
+@pause
+REM Запрос правил брандмаузера
+netsh advfirewall firewall show rule name=all
+@pause
+REM Подключение к удаленному рабочему столу
+netsh advfirewall firewall set rule group=
+"remote desktop" new enable=Yes
+@pause
+REM Экспорт/импорт установок брандмаузера
+netsh advfirewall export "C:\temp\WFconfiguration.wfw"
+netsh advfirewall import "C:\temp\WFconfiguration.wfw"
+@pause

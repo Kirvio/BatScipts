@@ -1,0 +1,23 @@
+ѕоказать скрытые системные файлы и папки:
+reg add УHKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\AdvancedФ /v Hidden /t REG_DWORD /d 1 /f
+
+—крыть системные файлы и папки:
+reg add УHKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\AdvancedФ /v Hidden /t REG_DWORD /d 2 /f
+
+ѕоказать скрытые защищенные системные файлы и папки:
+reg add УHKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\AdvancedФ /v ShowSuperHidden /t REG_DWORD /d 0 /f
+
+—крыть защищенные системные файлы и папки:
+reg add УHKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\AdvancedФ /v ShowSuperHidden /t REG_DWORD /d 1 /f
+
+ѕоказывать расширение файлов
+reg add УHKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\AdvancedФ /v HideFileExt /t REG_DWORD /d 0 /f
+
+ѕоказывать расширение файлов
+reg add УHKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\AdvancedФ /v HideFileExt /t REG_DWORD /d 1 /f
+
+—делать скрытым конкретный файл
+attrib +h "C:\Temp\1.jpg"
+
+—делать видимым скрытый файл
+attrib -h "C:\Temp\1.jpg"

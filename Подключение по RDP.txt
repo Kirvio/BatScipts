@@ -1,0 +1,3 @@
+mstsc /v:SERVER:62332 /f
+@pause
+exit

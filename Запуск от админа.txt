@@ -1,0 +1,1 @@
+runas /user:S-1-5-32-544 notepad.exe

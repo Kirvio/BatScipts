@@ -1,0 +1,3 @@
+defrag /C /H /V
+@pause
+exit

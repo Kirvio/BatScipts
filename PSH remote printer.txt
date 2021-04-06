@@ -1,0 +1,1 @@
+(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\192.168.1.45\FS-1040")

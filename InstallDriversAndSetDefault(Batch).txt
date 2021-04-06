@@ -1,0 +1,2 @@
+wmic printer get name
+wmic printer where name="NameOfPrinter" call setdefaultprinter
